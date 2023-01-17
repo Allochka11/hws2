@@ -1,12 +1,28 @@
 .sendForm {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+
 
 }
 
-.textarea {
-
+.textarea  {
+    min-height: 40px;
+    padding: 10px;
+    width: 920px;
+    background: #F5F7FB;
+    box-shadow: 0px 5px 20px rgba(29, 33, 38, 0.03), 0px 1px 2px rgba(29, 33, 38, 0.1);
+    border-radius: 20px;
 }
 
 .button {
+    border: none;
+margin-left: 44px;
+    background-color: #0066CC;
+    height: 40px;
+    width: 120px;
+    border-radius: 20px;
+    color: #FFFFFF;
 
 }
 
