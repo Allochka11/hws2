@@ -3,7 +3,7 @@
     max-width: 1280px;
 }
 
-.hw1 {
+.hw1 , .hw2{
     /*position: absolute;*/
     margin: 131px 70px 0 70px;
     font-family: 'Montserrat', serif;
@@ -12,6 +12,12 @@
     font-weight: 600;
     color: #000000;
 }
+
+.hw2 {
+    margin-top: 20px;
+}
+
+
 
 .hw {
     /*width: 1280px;*/
@@ -23,16 +29,17 @@
 .hwTitle {
     height: 27px;
     width: 165px;
-    left: 70px;
-    top: 131px;
+    /*left: 70px;*/
+    /*top: 131px;*/
 
     font-size: 22px;
     line-height: 27px;
     color: #000000;
+    margin:  27px 0 10px 0;
 }
 
 .line {
-    border: 1px solid grey;
+    border: .5px solid #80808042;
     width: 1280px;
     margin-left: -70px;
 }

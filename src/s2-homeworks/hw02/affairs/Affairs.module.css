@@ -53,3 +53,14 @@
     flex-wrap: wrap;
     max-width: 450px;
 }
+
+.affairsColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.container {
+    margin-top: 32px;
+
+}

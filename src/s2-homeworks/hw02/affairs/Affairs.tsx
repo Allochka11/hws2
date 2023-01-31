@@ -38,7 +38,7 @@ function Affairs(props: AffairsPropsType) {
     ))
 
     return (
-        <div>
+        <div className={s.container}>
             <div className={s.buttonContainer}>
                 <button
                     id={'hw2-button-all'}
@@ -69,7 +69,7 @@ function Affairs(props: AffairsPropsType) {
                     Low
                 </button>
             </div>
-            <div className={s.affairs}>{mappedAffairs}</div>
+            <div className={ mappedAffairs.length > 2 ?s.affairs : s.affairsColumn}>{mappedAffairs}</div>
         </div>
     )
 }
