@@ -1,4 +1,13 @@
 .greetingForm {
+    margin-top: 31px;
+}
+
+.error, .text, .greeting {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
 }
 
 
@@ -7,17 +16,12 @@
 }
 
 .error {
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
     color: #CC0000;
-
 }
 
 .input {
     border: 1px solid #D1D1D1;
+    padding: 8px 12px;
 }
 input {
     min-width: 372px;
@@ -64,13 +68,10 @@ input:focus {
 
 .text {
     color: rgba(0, 0, 0, 0.5);
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
     margin-bottom: 9px;
 }
 
 .greeting {
+    margin-top: 3px;
+
 }

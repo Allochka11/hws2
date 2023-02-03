@@ -72,6 +72,7 @@ function HW2() {
                     filter={filter}
                 />
             </div>
+            <div className={s2.line}></div>
         </div>
     )
 }
