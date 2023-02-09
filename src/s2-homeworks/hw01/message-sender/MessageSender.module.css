@@ -16,10 +16,10 @@
 
 .button {
     border: none;
-margin-left: 44px;
+    margin-left: 44px;
     background-color: #0066CC;
     height: 40px;
-    width: 120px;
+    min-width: 120px;
     border-radius: 20px;
     color: #FFFFFF;
 

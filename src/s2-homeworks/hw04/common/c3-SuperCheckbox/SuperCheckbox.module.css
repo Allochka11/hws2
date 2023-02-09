@@ -5,7 +5,7 @@
     cursor: pointer;
 }
 
-/*input[type="checkbox"] - no*/
+
 
 .checkbox {
     appearance: none;
@@ -31,6 +31,8 @@
     appearance: none;
 
     background-image: url('checked.svg');
+    width: 18px;
+    height: 18px;
     /*background: #99ff99;*/
 }
 
@@ -42,3 +44,4 @@
     font-family: 'Montserrat', sans-serif;
     color: #06c;
 }
+

@@ -9,7 +9,8 @@
 .imageAndText {
     display: flex;
     align-items: flex-end;
-    width: 462px;
+    min-width: 250px;
+    /*width: 462px;*/
 }
 
 .imageAndText img {
