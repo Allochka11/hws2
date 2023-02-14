@@ -36,6 +36,7 @@
     border-bottom: 12px solid #F5F7FB;
     filter: drop-shadow(-2px 1px 1px rgba(29, 33, 38, 0.1));
     transform: rotate(360deg);
+    z-index: -1;
 }
 
 .name {
