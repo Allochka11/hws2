@@ -1,6 +1,8 @@
 .App {
     --header_height: 60px;
-    max-width: 1280px;
+    /*max-width: 1280px;*/
+    width: 100vw;
+    height: 100vh;
 }
 
 .hw1 , .hw2, .hw3 , .hw4{
@@ -54,6 +56,6 @@
 
 .line {
     border: .5px solid #80808042;
-    width: 1280px;
+    width: 100vw;
     margin-left: -70px;
 }
