@@ -1,6 +1,7 @@
 import React, { FC, ReactNode, useEffect, useState } from 'react'
 import { Header } from '../header/Header'
 import { Sidebar } from '../sidebar/Sidebar'
+import s2 from "../../../s1-main/App.module.css";
 
 type PropsType = {
     children: ReactNode
@@ -9,11 +10,9 @@ type PropsType = {
 export const Layout: FC<PropsType> = ({ children }) => {
     const [open, setOpen] = useState(false)
     const handleClose = () => {
-        console.log('false')
         setOpen(false)
     }
     const handleOpen = () => {
-        console.log(true)
         setOpen(true)
     }
 
@@ -28,6 +27,8 @@ export const Layout: FC<PropsType> = ({ children }) => {
         <>
             <Sidebar open={open} handleClose={handleClose} />
             <Header handleOpen={handleOpen} />
+            <div className={s2.boxShadow}></div>
+            {/*<div className={`${s2.line} + ' ' + ${s2.boxShadow}`}></div>*/}
             <div>
                 {/*страницы*/}
                 {children}

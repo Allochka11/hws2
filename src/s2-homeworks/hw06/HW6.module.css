@@ -1,5 +1,23 @@
 .buttonsContainer {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .editableSpanContainer {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.superButtonSave, .superButtonSave:hover {
+    width: 116px;
+    height: 30px;
+    margin: 0 24px 20px 0;
+    background-color: #0066CC;
+}
+.superButtonGet, .superButtonGet:hover  {
+    width: 129px;
+    height: 30px;
+    border: 1px solid #0066CC;
+    background-color: #FFFFFF;
+    color: #0066CC;
 }

@@ -1,6 +1,7 @@
 import React, {FC} from 'react'
 import {NavLink} from 'react-router-dom'
 import s from './Sidebar.module.css'
+import s2 from '../../../s1-main/App.module.css'
 import {PATH} from '../Pages'
 import closeIcon from './closeOutline.svg'
 
@@ -12,7 +13,6 @@ type PropsType = {
 export const Sidebar: FC<PropsType> = ({open, handleClose}) => {
     const sidebarClass = s.sidebar
         + (open ? ' ' + s.open : ' ' + s.sidebarClose)
-    console.log(open)
     return (
         <>
             {/*затемнение справа от открытого меню*/}
@@ -53,7 +53,9 @@ export const Sidebar: FC<PropsType> = ({open, handleClose}) => {
                         Junior Plus
                     </NavLink>
                 </nav>
+
             </aside>
+
         </>
     )
 }
