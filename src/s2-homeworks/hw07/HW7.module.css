@@ -1,2 +1,19 @@
 .container {
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+}
+.container select {
+    appearance: none;
+    width: 165px;
+    height: 24px;
+    border: 1px solid #C2C2C2;
+    border-radius: 2px;
+    background: #FFFFFF;
+    margin-top: 23px;
+    /*color: #00cc22;*/
+}
+.container select option {
+    appearance: none;
+    /*background-color: #00cc22;*/
 }

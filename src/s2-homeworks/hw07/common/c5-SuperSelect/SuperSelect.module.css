@@ -1,9 +1,41 @@
 .select {
+    appearance: none;
+    width: 165px;
+    height: 24px;
+    border: 1px solid #C2C2C2;
+    border-radius: 2px;
+    background: #FFFFFF;
+    margin-top: 23px;
 }
 
 .select:focus {
+    background-color: #FFFFFF;
+    /*color: #00cc22;*/
 }
+
+
+
+option:focus {
+    color: #444645;
+    background: green;
+    /* hover on select */
+}
+option:checked{
+    color: rgb(246, 250, 0);
+    background-color: white;
+}
+
 
 
 .option:hover {
+    appearance: none;
+    color: yellow;
 }
+.openSelect {
+    appearance: none;
+    /*color: #00cc22;*/
+}
+
+/*.option {*/
+/*    background: red !important;*/
+/*}*/

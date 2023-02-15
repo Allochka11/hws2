@@ -56,6 +56,7 @@ const HW6 = () => {
                     </SuperButton>
                 </div>
             </div>
+            <div className={s2.line}></div>
         </div>
     )
 }
