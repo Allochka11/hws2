@@ -1,23 +1,69 @@
 .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 48px;
+    /*width: 50%;*/
+    border-bottom: 1px solid grey;
+
 }
 
-.item:last-of-type {
+.item:first-of-type {
+    /*height: 100px;*/
 }
 
 .users {
+    display: flex;
+    flex-direction: column;
+}
+.tr {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.tbody {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .buttonsContainer {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 10px;
+    margin-bottom: 18px;
+}
+.buttonDefault {
+    margin-left: 10px;
+    color: #0066CC;
+    background: #FFFFFF;
+    border: 1px solid #0066CC;
+
+}
+
+.buttonActive {
+    margin-right: 10px;
+    background: #0066CC;
+    border: 1px solid #0066CC;
+    border-radius: 3px;
+    color: #FFFFFF;
 }
 
 .container {
 }
 
 .thead {
+    display: flex;
+    align-items: center;
+    background: #E5E5E5;
+    height:36px
 }
 
 .nameCol {
+
+    /*margin-right: 218px;*/
 }
 
 .ageCol {
+    margin-right: 50%;
 }

@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import {homeWorkReducer} from './bll/homeWorkReducer'
-import s from './HW8.module.css'
 import s2 from '../../s1-main/App.module.css'
+import s from './HW8.module.css'
 import SuperButton from '../hw04/common/c2-SuperButton/SuperButton'
 import User from './User'
 
@@ -54,29 +54,31 @@ const HW8 = () => {
     }
 
     return (
-        <div id={'hw3'}>
+        <div id={'hw3'} className={s2.h8}>
+            <div className={s2.line}></div>
             <div className={s2.hwTitle}>Homework #8</div>
+            <div className={s2.line}></div>
             <div className={s2.hw}>
                 <div className={s.container}>
                     <div className={s.buttonsContainer}>
                         <SuperButton
                             id={'hw8-button-up'}
                             onClick={sortUp}
-                            xType={currentSort === 'up' ? '' : 'secondary'}
+                            xType={currentSort === 'up' ? s.buttonActive: s.buttonDefault }
                         >
                             Sort up
                         </SuperButton>
                         <SuperButton
                             id={'hw8-button-down'}
                             onClick={sortDown}
-                            xType={currentSort === 'down' ? '' : 'secondary'}
+                            xType={currentSort === 'down' ? s.buttonActive: s.buttonDefault }
                         >
                             Sort down
                         </SuperButton>
                         <SuperButton
                             id={'hw8-button-18'}
                             onClick={check18}
-                            xType={currentSort === '18' ? '' : 'secondary'}
+                            xType={currentSort === '18' ? s.buttonActive: s.buttonDefault }
                         >
                             Check 18+
                         </SuperButton>
@@ -84,16 +86,17 @@ const HW8 = () => {
 
                     <table id={'hw8-users'} className={s.users}>
                         <thead className={s.thead}>
-                        <tr>
+                        <tr className={s.tr}>
                             <td className={s.nameCol}>Name</td>
                             <td className={s.ageCol}>Age</td>
                         </tr>
                         </thead>
 
-                        <tbody>{finalPeople}</tbody>
+                        <tbody className={s.tbody}>{finalPeople}</tbody>
                     </table>
                 </div>
             </div>
+            <div className={s2.line}></div>
         </div>
     )
 }

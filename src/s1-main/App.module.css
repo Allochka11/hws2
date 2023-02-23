@@ -5,7 +5,7 @@
     height: 100vh;
 }
 
-.hw1 , .hw2, .hw3 , .hw4 , .hw6, .hw7{
+.hw1 , .hw2, .hw3 , .hw4 , .hw6, .hw7, .h8{
     /*position: absolute;*/
     /*margin: 47px 70px 0 70px;*/
     font-family: 'Montserrat', serif;
@@ -36,6 +36,8 @@
 
 
 .hw {
+    margin-top: 33px;
+    margin-bottom: 40px;
     /*width: 1280px;*/
     /*height: 373px;*/
     /*left: 0px;*/
