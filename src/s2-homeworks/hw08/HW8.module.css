@@ -3,24 +3,24 @@
     justify-content: space-between;
     align-items: center;
     height: 48px;
-    /*width: 50%;*/
     border-bottom: 1px solid grey;
-
 }
 
 .item:first-of-type {
-    /*height: 100px;*/
+
 }
 
 .users {
     display: flex;
     flex-direction: column;
 }
+
 .tr {
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
+
 .tbody {
     display: flex;
     flex-direction: column;
@@ -33,12 +33,12 @@
     margin-left: 10px;
     margin-bottom: 18px;
 }
+
 .buttonDefault {
     margin-left: 10px;
     color: #0066CC;
     background: #FFFFFF;
     border: 1px solid #0066CC;
-
 }
 
 .buttonActive {
@@ -60,8 +60,6 @@
 }
 
 .nameCol {
-
-    /*margin-right: 218px;*/
 }
 
 .ageCol {

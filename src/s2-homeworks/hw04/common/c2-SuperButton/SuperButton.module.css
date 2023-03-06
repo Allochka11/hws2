@@ -1,5 +1,6 @@
 .button {
-    width: 132px;
+    /*width: 132px;*/
+    width: 84px;
     height: 30px;
     color: #FFFFFF;
     border: none;
@@ -18,12 +19,17 @@
     color: #004D99;
 }
 
+
 .default {
     /*background: #0066CC;*/
 }
 
 .red {
     background: #CC1439;
+}
+.blue {
+    background: #0066CC;
+    /*width: 84px;*/
 }
 
 .default:hover {
@@ -63,6 +69,6 @@
 .button:disabled {
     background: #004D99;
     opacity: 0.5;
-    color: #002E5C;
+    color: #FFFFFF;
 }
 
