@@ -1,6 +1,6 @@
 .button {
     /*width: 132px;*/
-    width: 84px;
+    min-width: 84px;
     height: 30px;
     color: #FFFFFF;
     border: none;
@@ -29,7 +29,8 @@
 }
 .blue {
     background: #0066CC;
-    /*width: 84px;*/
+    padding: 0 10px;
+
 }
 
 .default:hover {
