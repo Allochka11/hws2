@@ -2,9 +2,18 @@
 }
 
 .wrapper {
+    display: flex;
+    align-items: center;
 }
 
 .number {
+    margin-right: 13px;
+}
+.number2 {
+    margin-left: 13px;
+}
+.range {
+    /*width: 300px;*/
 }
 
 

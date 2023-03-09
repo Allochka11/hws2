@@ -25,6 +25,7 @@ const SuperRange: React.FC<SliderProps> = (props) => {
                 '& .MuiSlider-rail': {
                     color: "#8B8B8B"
                 },
+
             }}
 
             {...props} // отдаём слайдеру пропсы если они есть (value например там внутри)
