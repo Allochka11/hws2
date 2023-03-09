@@ -12,6 +12,13 @@ const SuperRange: React.FC<SliderProps> = (props) => {
                     backgroundColor: "white",
                     border: "1px solid #00CC22",
                 },
+                '& .MuiSlider-thumb: before' : {
+                    color: "#00CC22",
+                    backgroundColor: "#00CC22",
+                    height:"10px",
+                    width:"10px",
+                    boxShadow: "none"
+                },
                 '& .MuiSlider-track': {
                     color: "#00CC22"
                 },
