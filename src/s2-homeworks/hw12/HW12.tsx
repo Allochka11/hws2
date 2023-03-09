@@ -31,7 +31,6 @@ const HW12 = () => {
 
     useEffect(() => {
         document.documentElement.dataset.theme = themeId + ''
-        console.log(themeId)
     }, [themeId])
 
     return (
@@ -47,10 +46,6 @@ const HW12 = () => {
                     className={s.select}
                     options={themes}
                     onChange={change}
-
-
-                    // сделать переключение тем
-
                 />
             </div>
             <div className={s2.line}></div>
