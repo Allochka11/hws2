@@ -1,18 +1,58 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+select {
+    appearance: auto;
+    background-color: transparent;
+    border: none;
+    padding: 0 1em 0 0;
+    margin: 0;
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
+    outline: none;
+
+
+}
+select::-ms-expand {
+    /*display: none;*/
+}
+:root {
+    --select-border: #777;
+    --select-focus: red;
+    --select-arrow: var(--select-border);
+}
 .select {
-    appearance: none;
-    width: 165px;
-    height: 24px;
-    border: 1px solid #C2C2C2;
-    border-radius: 2px;
-    background: #FFFFFF;
-    margin-top: 23px;
-}
+    width: 30%;
+    border: 1px solid var(--select-border);
+    border-radius: 0.25em;
+    padding: 0.25em 0.5em;
+    font-size: 1.25rem;
+    cursor: pointer;
+    line-height: 1.1;
+    background-color: #fff;
+    background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+    display: grid;
+    grid-template-areas: "select";
+    align-items: center;
 
-.select:focus {
-    background-color: #FFFFFF;
-    /*color: #00cc22;*/
 }
-
+.select::after {
+    content: "";
+    width: 0.8em;
+    height: 0.5em;
+    background-color: var(--select-arrow);
+    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+    justify-self: end;
+}
+select,
+.select:after {
+    grid-area: select;
+}
 
 
 option:focus {

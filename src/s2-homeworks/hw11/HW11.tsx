@@ -39,7 +39,6 @@ function HW11() {
                             id={'hw11-single-slider'}
                             onChange={change}
                             value={value1}
-                            className={s.range}
                         />
                     </div>
                     <div className={s.wrapper}>
@@ -48,8 +47,6 @@ function HW11() {
                             id={'hw11-double-slider'}
                             value={[value1, value2]}
                             onChange={change}
-                            className={s.range}
-
                         />
                         <span id={'hw11-value-2'} className={s.number2}>{value2}</span>
                     </div>

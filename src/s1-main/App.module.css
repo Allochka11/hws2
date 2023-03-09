@@ -5,7 +5,7 @@
     height: 100vh;
 }
 
-.hw1 , .hw2, .hw3 , .hw4 , .hw6, .hw7, .h8, .hw9, .hw10, .hw11{
+.hw1 , .hw2, .hw3 , .hw4 , .hw6, .hw7, .h8, .hw9, .hw10, .hw11, .hw12{
     /*position: absolute;*/
     /*margin: 47px 70px 0 70px;*/
     font-family: 'Montserrat', serif;
@@ -13,6 +13,8 @@
     line-height: 20px;
     font-weight: 600;
     color: #000000;
+    margin: 0 20px;
+
 }
 
 .hw2 {
@@ -28,9 +30,9 @@
 .hw4 {
     margin-top: 20px;
 }
-.hw5 {
-    margin: 20px 70px;
-}
+/*.hw5 {*/
+/*    margin: 20px 70px;*/
+/*}*/
 
 .hw {
     margin-top: 33px;

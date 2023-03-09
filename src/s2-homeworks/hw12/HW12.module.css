@@ -14,10 +14,9 @@
 }
 
 html {
-    background-color: var(--background);
+    display: block;
+    position: absolute;
+    background: var(--background);
     color: var(--color);
 }
 
-.select {
-
-}
