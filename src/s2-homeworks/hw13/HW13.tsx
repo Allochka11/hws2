@@ -37,22 +37,21 @@ const HW13 = () => {
 
                 setCode('Код 200!')
                 setImage(success200)
-                setText('...всё ок)\n' +
-                    'код 200 - обычно означает что скорее всего всё ок)')
+                setText('...всё ок, код 200 - обычно означает что скорее всего всё ок)')
                 setInfo('')
 
             })
             .catch((error) => {
                 if (error.response.status >= 400) {
+                    // console.log(error)
                     setImage(error400);
-                    setText('Ты не отправил success в body вообще!\n' +
-                        'ошибка 400 - обычно означает что скорее всего фронт отправил что-то не то на бэк!')
+                    setText(`Ты не отправил success в body вообще! ошибка ${error.response.status} - обычно означает что скорее всего фронт отправил что-то не то на бэк!`)
                     setInfo('')
 
                 }
                 if (error.response.status >= 500 || x === undefined) {
                     setImage(error500);
-                    setText('эмитация ошибки на сервере ошибка 500 - обычно означает что что-то сломалось на сервере, например база данныx')
+                    setText(`эмитация ошибки на сервере ошибка ${error.response.status} - обычно означает что что-то сломалось на сервере, например база данныx`)
                     setInfo('')
                 }
                 if(x === null) {
