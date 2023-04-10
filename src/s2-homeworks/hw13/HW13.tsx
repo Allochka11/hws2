@@ -34,32 +34,57 @@ const HW13 = () => {
         axios
             .post(url, {success: x})
             .then((res) => {
-
-                setCode('Код 200!')
+                setCode(`Код ${res.status}!`)
                 setImage(success200)
-                setText('...всё ок, код 200 - обычно означает что скорее всего всё ок)')
-                setInfo('')
-
+                // дописать
+                setInfo(res.data.info)
+                setText(res.data.errorText)
             })
-            .catch((error) => {
-                if (error.response.status >= 400) {
-                    // console.log(error)
-                    setImage(error400);
-                    setText(`Ты не отправил success в body вообще! ошибка ${error.response.status} - обычно означает что скорее всего фронт отправил что-то не то на бэк!`)
-                    setInfo('')
+            .catch((e) => {
+                // дописать
+                if (e.response.status) {
+                    console.log(e.response.data.errorText)
+                    setCode(`Ошибка ${e.response.status}!!`)
+                    setImage(e.response.status === 500 ? error500 : error400)
+                    setInfo(e.response.data.info)
+                    setText(e.response.data.errorText)
 
-                }
-                if (error.response.status >= 500 || x === undefined) {
-                    setImage(error500);
-                    setText(`эмитация ошибки на сервере ошибка ${error.response.status} - обычно означает что что-то сломалось на сервере, например база данныx`)
-                    setInfo('')
-                }
-                if(x === null) {
-                    setImage(errorUnknown);
-                    setText('Network Error AxiosError')
-                    setInfo('')
+                } else {
+                    // console.log(e.name, e.message)
+                    setImage(errorUnknown)
+                    setCode('Error')
+                    setInfo(e.name)
+                    setText(e.message)
                 }
             })
+            // .post(url, {success: x})
+            // .then((res) => {
+            //
+            //     setCode('Код 200!')
+            //     setImage(success200)
+            //     setText('...всё ок, код 200 - обычно означает что скорее всего всё ок)')
+            //     setInfo('')
+            //
+            // })
+            // .catch((error) => {
+            //     if (error.response.status >= 400) {
+            //         // console.log(error)
+            //         setImage(error400);
+            //         setText(`Ты не отправил success в body вообще! ошибка ${error.response.status} - обычно означает что скорее всего фронт отправил что-то не то на бэк!`)
+            //         setInfo('')
+            //
+            //     }
+            //     if (error.response.status >= 500 || x === undefined) {
+            //         setImage(error500);
+            //         setText(`эмитация ошибки на сервере ошибка ${error.response.status} - обычно означает что что-то сломалось на сервере, например база данныx`)
+            //         setInfo('')
+            //     }
+            //     if(x === null) {
+            //         setImage(errorUnknown);
+            //         setText('Network Error AxiosError')
+            //         setInfo('')
+            //     }
+            // })
     }
 
     return (
