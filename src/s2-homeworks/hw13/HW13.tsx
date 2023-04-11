@@ -47,14 +47,14 @@ const HW13 = () => {
                 if (error.response.status >= 400) {
                     setCode(error.response.status)
                     setImage(error400);
-                    setText(error.response.data.info)
+                    setText(error.response.data.errorText)
                     setInfo('')
 
                 }
                 if (error.response.status >= 500) {
                     setCode(error.response.status)
                     setImage(error500);
-                    setText(error.response.data.info)
+                    setText(error.response.data.errorText)
                     setInfo('')
                 }
                 if(error.response.status === 0) {
