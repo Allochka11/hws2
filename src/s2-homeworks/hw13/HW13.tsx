@@ -51,13 +51,13 @@ const HW13 = () => {
                     setInfo('')
 
                 }
-                if (error.response.status >= 500) {
+                else if (error.response.status >= 500) {
                     setCode(error.response.status)
                     setImage(error500);
                     setText(error.response.data.errorText)
                     setInfo('')
                 }
-                if(error.response.status === 0) {
+                else {
                     setImage(errorUnknown);
                     setText('Network Error AxiosError')
                     setInfo('Error')
