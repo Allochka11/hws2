@@ -48,14 +48,14 @@ const HW13 = () => {
                     setCode(error.response.status)
                     setImage(error400);
                     setText(error.response.data.errorText)
-                    setInfo('')
+                    setInfo(error.response.data.info)
 
                 }
                 else if (error.response.status >= 500) {
                     setCode(error.response.status)
                     setImage(error500);
                     setText(error.response.data.errorText)
-                    setInfo('')
+                    setInfo(error.response.data.info)
                 }
                 else {
                     setImage(errorUnknown);
