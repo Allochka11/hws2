@@ -43,24 +43,24 @@ const HW13 = () => {
             })
             .catch((error) => {
 
-                // console.log(error.response)
+                console.log(error.response)
                 if (error.response.status >= 400) {
                     setCode(error.response.status)
                     setImage(error400);
-                    setText(error.response.data.errorText)
+                    setText(error.response.data.info)
                     setInfo('')
 
                 }
                 if (error.response.status >= 500) {
                     setCode(error.response.status)
                     setImage(error500);
-                    setText(error.response.data.errorText)
+                    setText(error.response.data.info)
                     setInfo('')
                 }
                 if(error.response.status === 0) {
                     setImage(errorUnknown);
-                    setText(error.response.data.errorText)
-                    setInfo('')
+                    setText('Network Error AxiosError')
+                    setInfo('Error')
                 }
             })
     }
