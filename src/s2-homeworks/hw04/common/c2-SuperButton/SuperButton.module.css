@@ -14,9 +14,10 @@
 }
 
 .secondary {
-    width: 158px;
+    width: 132px;
     border: 1px solid #0066CC;
     color: #004D99;
+    margin: 10px 10px;
 }
 
 
@@ -48,6 +49,7 @@
     width: 158px;
     background: #E5F0FA;
     border: 1px solid #0066CC;
+    margin: 10px 10px;
 }
 
 
@@ -59,6 +61,7 @@
 .secondary:active {
     background: #C9E5FF;
     border: 1px solid #0066CC;
+    margin: 10px 10px;
 
 }
 
@@ -71,5 +74,7 @@
     background: #004D99;
     opacity: 0.5;
     color: #FFFFFF;
+    width: 132px;
+    margin: 10px 10px;
 }
 

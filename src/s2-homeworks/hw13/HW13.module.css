@@ -2,15 +2,23 @@
 }
 
 .responseContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 90px 0 ;
 }
 
 .imageContainer {
+    margin-right: 87px;
 }
 
 .image {
 }
 
 .textContainer{
+    max-width: 510px;
 }
 
 .code {
