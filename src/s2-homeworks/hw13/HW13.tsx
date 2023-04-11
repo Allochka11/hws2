@@ -35,10 +35,9 @@ const HW13 = () => {
 
             .post(url, {success: x}, {withCredentials:true})
             .then((res) => {
-
                 setCode('200')
                 setImage(success200)
-                setText('200')
+                setText(res.data.errorText)
                 setInfo(res.data.info)
 
             })
@@ -46,22 +45,21 @@ const HW13 = () => {
 
                 // console.log(error.response)
                 if (error.response.status >= 400) {
-
                     setCode(error.response.status)
                     setImage(error400);
-                    setText('400')
+                    setText(error.response.data.errorText)
                     setInfo('')
 
                 }
                 if (error.response.status >= 500) {
                     setCode(error.response.status)
                     setImage(error500);
-                    setText('500')
+                    setText(error.response.data.errorText)
                     setInfo('')
                 }
                 if(error.response.status === 0) {
                     setImage(errorUnknown);
-                    setText('Error')
+                    setText(error.response.data.errorText)
                     setInfo('')
                 }
             })
