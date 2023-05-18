@@ -33,7 +33,7 @@ const HW13 = () => {
 
         axios
 
-            .post(url, {success: x}, {withCredentials:true})
+            .post(url, {success: x}, {withCredentials: true})
             .then((res) => {
                 setCode('200')
                 setImage(success200)
@@ -43,21 +43,18 @@ const HW13 = () => {
             })
             .catch((error) => {
 
-                console.log(error.response)
                 if (error.response.status >= 400) {
                     setCode(error.response.status)
                     setImage(error400);
                     setText(error.response.data.errorText)
                     setInfo(error.response.data.info)
 
-                }
-                else if (error.response.status >= 500) {
+                } else if (error.response.status >= 500) {
                     setCode(error.response.status)
                     setImage(error500);
                     setText(error.response.data.errorText)
                     setInfo(error.response.data.info)
-                }
-                else {
+                } else {
                     setImage(errorUnknown);
                     setText('Network Error AxiosError')
                     setInfo('Error')

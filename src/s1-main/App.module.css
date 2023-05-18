@@ -5,7 +5,7 @@
     height: 100vh;
 }
 
-.hw1 , .hw2, .hw3 , .hw4 , .hw6, .hw7, .h8, .hw9, .hw10, .hw11, .hw12, .hw13{
+.hw1, .hw2, .hw3, .hw4, .hw6, .hw7, .h8, .hw9, .hw10, .hw11, .hw12, .hw13, .hw14 {
     /*position: absolute;*/
     /*margin: 47px 70px 0 70px;*/
     font-family: 'Montserrat', serif;
@@ -20,16 +20,19 @@
 .hw2 {
     margin-top: 20px;
 }
-.hw2Container, .hw3Container , .hw7Container{
+
+.hw2Container, .hw3Container, .hw7Container {
     margin-bottom: 73px;
 }
 
 .hw3 {
     margin-top: 20px;
 }
+
 .hw4 {
     margin-top: 20px;
 }
+
 /*.hw5 {*/
 /*    margin: 20px 70px;*/
 /*}*/
@@ -52,7 +55,7 @@
     font-size: 22px;
     line-height: 27px;
     color: #000000;
-    margin:  27px 0 10px 0;
+    margin: 27px 0 10px 0;
 }
 
 .line {
@@ -65,5 +68,5 @@
     width: 100vw;
     margin-left: -70px;
     background: #FFFFFF;
-    box-shadow:  -2px 0px 10px 1px #0d0c0c69;
+    box-shadow: -2px 0px 10px 1px #0d0c0c69;
 }
