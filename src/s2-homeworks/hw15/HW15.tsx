@@ -28,9 +28,11 @@ type ParamsType = {
 }
 
 const getTechs = (params: ParamsType) => {
+    // debugger
     return axios
+
         .get<{ techs: TechType[], totalCount: number }>(
-            'https://incubator-personal-page-back.herokuapp.com/api/3.0/homework/test3',
+            'https://samurai.it-incubator.io/api/3.0/homework/test3',
             {params}
         )
         .catch((e) => {
@@ -41,16 +43,26 @@ const getTechs = (params: ParamsType) => {
 const HW15 = () => {
     const [sort, setSort] = useState('')
     const [page, setPage] = useState(1)
-    const [count, setCount] = useState(4)
+    const [count, setCount] = useState(7)
     const [idLoading, setLoading] = useState(false)
     const [totalCount, setTotalCount] = useState(100)
     const [searchParams, setSearchParams] = useSearchParams()
     const [techs, setTechs] = useState<TechType[]>([])
+    // console.log(totalCount)
+
+    // console.log(searchParams)/
 
     const sendQuery = (params: any) => {
         setLoading(true)
         getTechs(params)
             .then((res) => {
+                if (res?.data) {
+                    // debugger
+                    setTechs(res.data.techs)
+                    setLoading(false)
+                    setTotalCount(res.data.totalCount)
+                }
+
                 // делает студент
 
                 // сохранить пришедшие данные
@@ -59,77 +71,108 @@ const HW15 = () => {
             })
     }
 
+
     const onChangePagination = (newPage: number, newCount: number) => {
+        console.log(newCount)
+        setPage(newPage)
+        // setCount(newCount)
+        if (newCount == 0) {
+            // debugger
+            sendQuery({page: newPage, count: count})
+        } else {
+            // debugger
+            setCount(newCount)
+            sendQuery({page: newPage, count: newCount})
+        }
+
+        // debugger
         // делает студент
+        // setLoading(true)
 
-        // setPage(
-        // setCount(
-
-        // sendQuery(
-        // setSearchParams(
-
+        // setCount(newCount)
         //
+        //
+        // sendQuery({sort, newPage, newCount})
+        //
+        // setSearchParams()
+
+
     }
 
     const onChangeSort = (newSort: string) => {
+        setLoading(true)
+
         // делает студент
 
-        // setSort(
-        // setPage(1) // при сортировке сбрасывать на 1 страницу
+        setSort(newSort)
+        setPage(1) // при сортировке сбрасывать на 1 страницу
 
-        // sendQuery(
-        // setSearchParams(
+        sendQuery(newSort)
+        // setSearchParams()
 
         //
     }
 
     useEffect(() => {
+        setLoading(true)
         const params = Object.fromEntries(searchParams)
+
+
         sendQuery({page: params.page, count: params.count})
         setPage(+params.page || 1)
         setCount(+params.count || 4)
     }, [])
 
-    const mappedTechs = techs.map(t => (
-        <div key={t.id} className={s.row}>
-            <div id={'hw15-tech-' + t.id} className={s.tech}>
-                {t.tech}
-            </div>
 
-            <div id={'hw15-developer-' + t.id} className={s.developer}>
-                {t.developer}
+    const mappedTechs = techs.map(t => {
+        // debugger
+        return (
+            <div key={t.id} className={s.row}>
+                <div id={'hw15-tech-' + t.id} className={s.tech}>
+                    {t.tech}
+                </div>
+
+                <div id={'hw15-developer-' + t.id} className={s.developer}>
+                    {t.developer}
+                </div>
             </div>
-        </div>
-    ))
+        )
+    })
+    // console.log(techs)
 
     return (
-        <div id={'hw15'}>
+        <div id={'hw15'} className={s2.hw15}>
             <div className={s2.hwTitle}>Homework #15</div>
+            <div className={s2.line}></div>
 
             <div className={s2.hw}>
-                {idLoading && <div id={'hw15-loading'} className={s.loading}>Loading...</div>}
-
+                {idLoading && <div className={s.loading}>
+                    <div className={s.loader}></div>
+                </div>}
                 <SuperPagination
                     page={page}
                     itemsCountForPage={count}
                     totalCount={totalCount}
                     onChange={onChangePagination}
                 />
+                <div className={s.rowContainer}>
+                    <div className={s.rowHeader}>
+                        <div className={s.techHeader}>
+                            Tech
+                            <SuperSort sort={sort} value={'tech'} onChange={onChangeSort}/>
+                        </div>
 
-                <div className={s.rowHeader}>
-                    <div className={s.techHeader}>
-                        tech
-                        <SuperSort sort={sort} value={'tech'} onChange={onChangeSort}/>
+                        <div className={s.developerHeader}>
+                            Developer
+                            <SuperSort sort={sort} value={'developer'} onChange={onChangeSort}/>
+                        </div>
                     </div>
 
-                    <div className={s.developerHeader}>
-                        developer
-                        <SuperSort sort={sort} value={'developer'} onChange={onChangeSort}/>
-                    </div>
+                    {mappedTechs}
                 </div>
 
-                {mappedTechs}
             </div>
+            <div className={s2.line}></div>
         </div>
     )
 }
