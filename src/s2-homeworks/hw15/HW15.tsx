@@ -28,9 +28,7 @@ type ParamsType = {
 }
 
 const getTechs = (params: ParamsType) => {
-    // debugger
     return axios
-
         .get<{ techs: TechType[], totalCount: number }>(
             'https://samurai.it-incubator.io/api/3.0/homework/test3',
             {params}
@@ -48,9 +46,6 @@ const HW15 = () => {
     const [totalCount, setTotalCount] = useState(100)
     const [searchParams, setSearchParams] = useSearchParams()
     const [techs, setTechs] = useState<TechType[]>([])
-    // console.log(totalCount)
-
-    // console.log(searchParams)/
 
     const sendQuery = (params: any) => {
         setLoading(true)
@@ -62,12 +57,6 @@ const HW15 = () => {
                     setLoading(false)
                     setTotalCount(res.data.totalCount)
                 }
-
-                // делает студент
-
-                // сохранить пришедшие данные
-
-                //
             })
     }
 
@@ -82,21 +71,13 @@ const HW15 = () => {
         }
         setLoading(true)
         setSearchParams()
-
-
     }
 
     const onChangeSort = (newSort: string) => {
-        // debugger
-        // console.log(sort)
-
         setLoading(true)
-
         setSort(newSort)
         sendQuery({sort: newSort, page: 1, count: count})
-        // setPage(1)
         setSearchParams()
-
     }
 
     useEffect(() => {
@@ -128,9 +109,9 @@ const HW15 = () => {
             <div className={s2.line}></div>
 
             <div className={s2.hw}>
-                {/*{idLoading && <div className={s.loading}>*/}
-                {/*    <div className={s.loader}></div>*/}
-                {/*</div>}*/}
+                {idLoading && <div className={s.loading}>
+                    <div className={s.loader}></div>
+                </div>}
                 <SuperPagination
                     page={page}
                     itemsCountForPage={count}
