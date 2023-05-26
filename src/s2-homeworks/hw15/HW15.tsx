@@ -87,20 +87,14 @@ const HW15 = () => {
     }
 
     const onChangeSort = (newSort: string) => {
-        console.log(sort)
+        // debugger
+        // console.log(sort)
 
         setLoading(true)
 
-        // // делает студент
-        // if (newSort) {
-        //
-        //     sendQuery({sort: newSort})
-        // } else {
-        //
-        // }
         setSort(newSort)
-        sendQuery({sort: sort})
-        setPage(1)
+        sendQuery({sort: newSort, page: 1, count: count})
+        // setPage(1)
         setSearchParams()
 
     }
@@ -134,9 +128,9 @@ const HW15 = () => {
             <div className={s2.line}></div>
 
             <div className={s2.hw}>
-                {idLoading && <div className={s.loading}>
-                    <div className={s.loader}></div>
-                </div>}
+                {/*{idLoading && <div className={s.loading}>*/}
+                {/*    <div className={s.loader}></div>*/}
+                {/*</div>}*/}
                 <SuperPagination
                     page={page}
                     itemsCountForPage={count}
