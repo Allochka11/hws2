@@ -21,18 +21,14 @@ const SuperSelect: React.FC<SuperSelectPropsType> = ({
     const mappedOptions: any[] = options
         ? options.map((o, i) => {
                 return (
-                    <>
-                        <option
-                            id={'hw7-option-' + o.id}
-                            className={s.option}
-                            key={'hw7-option-' + o.id}
-                            value={o.id}
-                        >
-                            {o.value}
-                        </option>
-
-                    </>
-
+                    <option
+                        id={'hw7-option-' + o.id}
+                        className={s.option}
+                        key={'hw7-option-' + o.id}
+                        value={o.id}
+                    >
+                        {o.value}
+                    </option>
                 )
             }
         )

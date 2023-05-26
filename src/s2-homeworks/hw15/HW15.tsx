@@ -73,51 +73,41 @@ const HW15 = () => {
 
 
     const onChangePagination = (newPage: number, newCount: number) => {
-        console.log(newCount)
         setPage(newPage)
-        // setCount(newCount)
         if (newCount == 0) {
-            // debugger
             sendQuery({page: newPage, count: count})
         } else {
-            // debugger
             setCount(newCount)
             sendQuery({page: newPage, count: newCount})
         }
-
-        // debugger
-        // делает студент
-        // setLoading(true)
-
-        // setCount(newCount)
-        //
-        //
-        // sendQuery({sort, newPage, newCount})
-        //
-        // setSearchParams()
+        setLoading(true)
+        setSearchParams()
 
 
     }
 
     const onChangeSort = (newSort: string) => {
+        console.log(sort)
+
         setLoading(true)
 
-        // делает студент
-
-        setSort(newSort)
-        setPage(1) // при сортировке сбрасывать на 1 страницу
-
-        sendQuery(newSort)
-        // setSearchParams()
-
+        // // делает студент
+        // if (newSort) {
         //
+        //     sendQuery({sort: newSort})
+        // } else {
+        //
+        // }
+        setSort(newSort)
+        sendQuery({sort: sort})
+        setPage(1)
+        setSearchParams()
+
     }
 
     useEffect(() => {
         setLoading(true)
         const params = Object.fromEntries(searchParams)
-
-
         sendQuery({page: params.page, count: params.count})
         setPage(+params.page || 1)
         setCount(+params.count || 4)
@@ -125,7 +115,6 @@ const HW15 = () => {
 
 
     const mappedTechs = techs.map(t => {
-        // debugger
         return (
             <div key={t.id} className={s.row}>
                 <div id={'hw15-tech-' + t.id} className={s.tech}>
@@ -138,7 +127,6 @@ const HW15 = () => {
             </div>
         )
     })
-    // console.log(techs)
 
     return (
         <div id={'hw15'} className={s2.hw15}>
