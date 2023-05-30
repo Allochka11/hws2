@@ -12,7 +12,7 @@ export type SuperPaginationPropsType = {
     onChange: (page: number, count: number) => void
 }
 
-const SuperPagination: React.FC<SuperPaginationPropsType> = (
+const PaginationMemo: React.FC<SuperPaginationPropsType> = (
     {
         page, itemsCountForPage, totalCount, onChange, id = 'hw15',
     }
@@ -75,5 +75,7 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = (
         </div>
     )
 }
+
+const SuperPagination = React.memo(PaginationMemo)
 
 export default SuperPagination
